@@ -36,7 +36,7 @@ od = OrderedDict(sorted(d.items(), key=lambda x:int(x[0])))
 for key, values in od.items():
     print('Request %s: ' % (key)),
     if values[1]:
-        print('%.3f' % (values[1] - values[0]).seconds)
+        print((values[1] - values[0]).total_seconds())
     else:
         print('-1.000')
 
